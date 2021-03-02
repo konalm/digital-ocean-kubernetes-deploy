@@ -11,7 +11,7 @@ export COMMIT_SHA1=$COMMIT_SHA1
 #  it's not possible to do in-place substitution, so we need to save the output to another file
 #  and overwrite the original with that one.
 envsubst <./kube/do-sample-deployment.yml >./kube/do-sample-deployment.yaml.out
-mv ./kube/do-sample-deployment.yml.out ./kube/do-sample-deployment.yaml
+mv ./kube/do-sample-deployment.yaml.out ./kube/do-sample-deployment.yaml
 
 echo "$KUBERNETES_CLUSTER_CERTIFICATE" | base64 --decode > cert.crt
 
